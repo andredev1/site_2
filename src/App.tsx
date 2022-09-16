@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { NONAME } from 'dns';
 
 function App() {
   return (
@@ -29,14 +30,29 @@ function App() {
     }>
       <a
           className="App-link"
-          href="mailto:sc@ark4.net"
+          href=
+          "mailto:sc@ark4.net?subject=Contact&body=Dear Mr SC"
           target="_blank"
           rel="noopener noreferrer"
+          style={{ 
+
+textDecorationLine:'none',
+            color: '#fff'
+          }}
         >
+          <div style={{ 
+
+
+display: "flex",
+fontFamily: 'arial',
+alignItems: "center",
+justifyContent: "center",
+justifyItems: "center"}}>
           contact
+          </div>
         </a>
     </div>
-
+    
         
       </header>
     </div>

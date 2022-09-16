@@ -9,10 +9,24 @@ function App() {
 
 
       <div style={{ 
-        height: '100vh',
-        width: '100vw',
-      backgroundImage: `url("https://imageswebpublic.s3.eu-west-1.amazonaws.com/background.png")` 
-    }}>
+
+
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  justifyItems: "center",
+  flexDirection: "row-reverse",
+  width: "100%",
+  height: "100vh",
+  backgroundImage: `url("https://imageswebpublic.s3.eu-west-1.amazonaws.com/background.png")`,
+  backgroundSize: "cover",
+  backgroundRepeat: "no-repeat",
+  backgroundPosition: "50% 10%"
+}
+
+
+
+    }>
       <a
           className="App-link"
           href="mailto:sc@ark4.net"

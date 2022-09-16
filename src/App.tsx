@@ -6,17 +6,28 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      <img 
+
+style={{
+    width: '100%',
+    height: '100%'
+}}
+
+
+
+      src="https://imageswebpublic.s3.eu-west-1.amazonaws.com/background.png"
+      alt="new"
+      />
         <p>
-          Edit <code>src/App.tsx</code> and save to reload.
+          contact us
         </p>
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="https://serenitycapital.io/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          contact us
         </a>
       </header>
     </div>
@@ -24,3 +35,6 @@ function App() {
 }
 
 export default App;
+
+
+

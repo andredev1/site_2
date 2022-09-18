@@ -12,7 +12,7 @@ function App() {
   
 
     <div className="App">
-      <header className="App-header" title='Ark4'>
+      <header className="App-header" title='Ark4' >
 
 
       <div style={{ 
@@ -50,11 +50,14 @@ textDecorationLine:'none',
 
 
 display: "flex",
+fontSize: '9px;',
 fontFamily: 'arial',
 alignItems: "center",
 justifyContent: "center",
 justifyItems: "center"}}>
-          contact
+          
+          ping
+
           </div>
         </a>
     </div>

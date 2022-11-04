@@ -1,46 +1,151 @@
-# Getting Started with Create React App
+# React Cryptocurrency App
+Consolidating RESTFUL calls from the CoinGecko API into a React application. I'll be using v3 of the API (the most recent version at the time of starting this project) This app will be using ant design for UI. 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# Project Structure 
+Generated with `tree` command.
+```
+.
+├── API
+│   └── index.js
+├── ChartConfig
+│   └── index.js
+├── components
+│   ├── App.css
+│   ├── App.js
+│   ├── Coins
+│   │   ├── ReactCoinCommunityStats.js
+│   │   ├── ReactCoinDetailSummary.js
+│   │   ├── ReactCoinDeveloperStats.js
+│   │   ├── ReactCoinMarketDetailedStats.js
+│   │   ├── ReactCoinMarketStats.js
+│   │   ├── ReactCoinScores.js
+│   │   ├── ReactCoinsDetail.js
+│   │   └── ReactCoinsList.js
+│   ├── Empty
+│   │   └── ReactEmpty.js
+│   ├── Events
+│   │   └── ReactEvents.js
+│   ├── ExchangeRates
+│   │   └── ReactExchangeRates.js
+│   ├── Exchanges
+│   │   └── ReactExchangesList.js
+│   ├── General
+│   │   ├── ReactAbout.js
+│   │   └── ReactHome.js
+│   ├── Global
+│   │   └── ReactGlobal.js
+│   ├── Navigation
+│   │   ├── ReactFooter.js
+│   │   ├── ReactHeader.js
+│   │   └── ReactSider.js
+│   └── StatusUpdates
+│       └── ReactStatusUpdates.js
+├── constants
+│   └── index.js
+├── images
+│   ├── branding
+│   │   └── CoinGecko.png
+│   ├── flaticon
+│   │   ├── 001-bitcoin.svg
+│   │   ├── 001-chat.svg
+│   │   ├── 002-bitcoin-1.svg
+│   │   ├── 002-bitcoin.svg
+│   │   ├── 003-bitcoin-2.svg
+│   │   ├── 003-smartphone.svg
+│   │   ├── 004-exchange.svg
+│   │   ├── 005-idea.svg
+│   │   ├── 006-binary.svg
+│   │   └── worldwide.svg
+│   └── logo
+│       └── logo.png
+├── index.js
+├── redux_actions
+│   └── index.js
+├── redux_reducers
+│   └── index.js
+└── styles
+    └── index.js
+```
 
-In the project directory, you can run:
+# Screenshots
 
-### `npm start`
+**home**
+![home](https://github.com/danielc92/react-crypto-app/blob/master/screenshots/Screen%20Shot%202019-07-29%20at%202.00.44%20pm.jpg)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+**about**
+![about](https://github.com/danielc92/react-crypto-app/blob/master/screenshots/Screen%20Shot%202019-07-29%20at%202.01.08%20pm.jpg)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+**status updates**
+![status updates](https://github.com/danielc92/react-crypto-app/blob/master/screenshots/Screen%20Shot%202019-07-29%20at%201.59.49%20pm.jpg)
 
-### `npm test`
+**coins listing**
+![coins listing](https://github.com/danielc92/react-crypto-app/blob/master/screenshots/Screen%20Shot%202019-07-29%20at%201.59.56%20pm.jpg)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**coin details 1**
+![coin details](https://github.com/danielc92/react-crypto-app/blob/master/screenshots/Screen%20Shot%202019-07-29%20at%201.59.49%20pm.jpg)
 
-### `npm run build`
+**coin details 2**
+![coin details 2](https://github.com/danielc92/react-crypto-app/blob/master/screenshots/Screen%20Shot%202019-07-29%20at%202.00.04%20pm.jpg)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**coin details 3**
+![coin details 3](https://github.com/danielc92/react-crypto-app/blob/master/screenshots/Screen%20Shot%202019-07-29%20at%202.00.07%20pm.jpg)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**event list**
+![event listing](https://github.com/danielc92/react-crypto-app/blob/master/screenshots/Screen%20Shot%202019-07-29%20at%202.00.16%20pm.jpg)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**exchanges listing**
+![exchanges listing](https://github.com/danielc92/react-crypto-app/blob/master/screenshots/Screen%20Shot%202019-07-29%20at%202.00.31%20pm.jpg)
 
-### `npm run eject`
+**exchange rates**
+![exchange rates](https://github.com/danielc92/react-crypto-app/blob/master/screenshots/Screen%20Shot%202019-07-29%20at%202.00.36%20pm.jpg)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+**global**
+![global](https://github.com/danielc92/react-crypto-app/blob/master/screenshots/Screen%20Shot%202019-07-29%20at%202.00.40%20pm.jpg)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+# Themes
+The themes for this app will directly correlate to the api endpoints provided by the CoinGecko API. I want to split up the app into digestible React components in the following areas, which will most likely form part of a larger dashboard interface.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Coins
+- Exchanges
+- Status Updates
+- Exchange Rates
+- Events
+- Global
 
-## Learn More
+# Requirements (npm)
+Requirements for this project can be found in the package.json. And can be installed with `npm install` from root of the project directory.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+I aim to use the following packages:
+**must have packages**
+- antd (ui framework for react)
+- react (front-end)
+- react-router-dom (routing for react)
+- chartjs (charting library)
+- axios (graceful api calls)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+**optional packages**
+- redux (may need redux for state management if number of components grows)
+- ant motion (animations for ant design ui)
+
+
+# Tests
+
+# Sources
+- [The CoinGecko API](https://www.coingecko.com/en/api#)
+- [React documentation](https://reactjs.org/docs/getting-started.html)
+- [Ant Design Documentation](https://ant.design/docs/react/introduce)
+
+# Steps to reproduce
+
+```sh
+# install dependencies and start local server (make sure you have nvm and yarn installed beforehand)
+nvm use
+yarn
+yarn start
+
+# building
+yarn build
+```

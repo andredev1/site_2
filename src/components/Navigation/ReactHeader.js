@@ -44,6 +44,11 @@ class ReactHeader extends Component {
                 <InfoCircleOutlined style={iconStyle}/>About
               </Link>
             </Menu.Item>
+            <Menu.Item key="source">
+              <a rel="noopener noreferrer" target="_blank" href="https://github.com/danielc92/react-crypto-app">
+                <GithubOutlined style={iconStyle}/>Source
+              </a>
+            </Menu.Item>
           </Menu>
         </Header>
       </React.Fragment>
